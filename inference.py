@@ -1,55 +1,18 @@
 import argparse
-import colorsys
-import cv2
+import numpy as np
 import os
+import cv2
+
 
 from pycoral.adapters.common import input_size
 from pycoral.adapters.detect import get_objects
 from pycoral.utils.dataset import read_label_file
 from pycoral.utils.edgetpu import make_interpreter
 from pycoral.utils.edgetpu import run_inference
-#
-import cv2
+
 from color_recognition_api import color_histogram_feature_extraction
 from color_recognition_api import knn_classifier
-import os
-import os.path
-from PIL import Image
-from PIL import ImageDraw
-from PIL import ImageFont
-
-import numpy as np
-import tflite_runtime.interpreter as tflite 
-from pycoral.adapters import common
-from pycoral.adapters import detect
-from pycoral.utils.dataset import read_label_file
-import random
-import os
-from color_recognition_api import color_histogram_feature_extraction
-from color_recognition_api import knn_classifier
-import cv2
-
-
-from multiprocessing import cpu_count
-
 from scipy import ndimage
-
-
-#from utils import CameraWebsocketHandler
-#from utils.BiQuad import BiQuadFilter
-#from functools import partial
-#from PIL import Image
-#from scipy import ndimage
-#import edgetpu.classification.engine
-#import threading
-#import asyncio
-#import base64
-#import utils
-#import cv2
-#import argparse
-#import sys
-#import RPi.GPIO as GPIO
-
 
 
 def main():
